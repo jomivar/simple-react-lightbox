@@ -45,7 +45,8 @@
     "build": "rimraf dist && tsc && cross-env NODE_ENV=production rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build"
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "yarn predeploy"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -130,5 +131,6 @@
     "rollup-plugin-polyfill-node": "^0.12.0",
     "subscribe-event": "^1.1.1",
     "use-debounce": "^9.0.4"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
